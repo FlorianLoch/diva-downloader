@@ -1,0 +1,18 @@
+{
+  "name": "diva-downloader",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "commander": "^2.9.0"
+  },
+  "bin": {
+      "diva-downloader": "index.js"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Florian Loch",
+  "license": "ISC"
+}
