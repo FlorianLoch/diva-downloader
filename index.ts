@@ -30,8 +30,13 @@ program.args.forEach((url: string) => {
    mediaUrls.push(mediaUrl); 
 });
 
-console.log(`${counterFailed} of ${program.args.length} urls could not be handled!`);
+if (counterFailed > 0) {
+    console.log(`${counterFailed} of ${program.args.length} urls could not be handled!`);
+}
+else {
+    console.log("All urls could be computed! Starting downloads...");
+}
 
 childProcess.spawnSync("wget", mediaUrls, {
-    stdio: [0, 0, 0]
+    stdio: ["inherit", "inherit", "inherit"]
 });

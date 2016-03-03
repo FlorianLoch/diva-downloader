@@ -1,8 +1,7 @@
 const matcher = /.*(DIVA-([0-9]{4})-[0-9]+).*/;
-const inputUrl = "http://mediaservice.bibliothek.kit.edu/#/details/DIVA-2016-182/10";
 
 export function getMediaUrlForPageUrl(url: string) : string {
-    const match = matcher.exec(inputUrl);
+    const match = matcher.exec(url);
     if (match !== null && match.length === 3) {
         return constructMediaUrl(match[2], match[1]);
     }
